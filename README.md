@@ -1,6 +1,7 @@
 # ProjTemplate
 MScDevOps Assign - Group 1: The end customer would like an online booking system for range of Movie making courses
 
+
 # Table of Contents
     Preamble
     Scrum Masters
@@ -34,11 +35,11 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 Rotating scrum master so that everyone gets to experience the role once.
 
 # Product Owner
-<<List name>> (Permanent)
+<<list week number, student name>>
+Rotating product owner so that everyone gets to experience the role once.
 
 # Team Members
 <<list team member names here>>
-
 
 # Project Deadline
 Thursday 23rd March at midnight
@@ -77,7 +78,7 @@ Update the below to add what the group is using <<>>
   - Secure code:  <<>>
   - performance testing tool to be used <<>>
 - Documentation / code commenting <<>>
-- Datastore for persistance
+- Datastore for persistance <<>>
  
 # Security:
 - << >>: uses static analysis to find bugs in code. 
@@ -89,14 +90,14 @@ Update the below to add what the group is using <<>>
 - UA  <<>>
     
 # Environments:
-- staging and production
-- tight configuration management for consistency and reproducibility
-- automated creation and deployments
-- integrated and automated pipeline (commit -> test -> deploy)
+- staging and production  <<>>
+- tight configuration management for consistency and reproducibility  <<>>
+- automated creation and deployments  <<>>
+- integrated and automated pipeline (commit -> test -> deploy) <<>>
 
 # Github version control:
-- branches used
-- version/release management
+- branches used <<>>
+- version/release management <<>>
 
 # Agile project management methods/principles (jira)
 
