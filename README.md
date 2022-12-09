@@ -31,14 +31,37 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 
 # Scrum Master
 <<list week number, student name>>
+<< Week 1 - Shashank
+   week 2 - Gourish
+   week 3 - Priya
+   week 4 - Dilin
+   week 5 - Arvind
+   week 6 - Pratik
+   week 7 - Darshan
+   week 8 - Koushik >>
 Rotating scrum master so that everyone gets to experience the role once.
 
 # Product Owner
 <<list week number, student name>>
+<< Week 1 - Koushik
+   week 2 - Darshan
+   week 3 - Shashank
+   week 4 - Pratik
+   week 5 - Arvind
+   week 6 - Dilin
+   week 7 - priya
+   week 8 - Gourish >>
 Rotating product owner so that everyone gets to experience the role once.
 
 # Team Members
-<<list team member names here>>
+<< 1) Priya
+   2) Gourish
+   3) Dilin
+   4) Arvind
+   5) Pratik
+   6) Darshan
+   7) Koushik
+   8) Shashank >>
 
 # Project Deadline
 Thursday 23rd March at midnight
