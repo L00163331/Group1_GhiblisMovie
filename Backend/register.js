@@ -59,3 +59,5 @@ async function register(userInfo){
     return await dynamodb.put(params).promise().then(() => {
         return true; 
     }, error=> {console.error('Ther is an error saving user:', error)});
+
+    module.exports.register = register;
