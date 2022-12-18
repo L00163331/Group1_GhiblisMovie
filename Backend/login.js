@@ -4,7 +4,7 @@ AWS.config.update({
 })
 const util = require('./utils');
 const bcypt = require('bcryptjs');
-const { getSuggestedQuery } = require('@testing-library/react');
+const auth = require('./auth');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 const userTable= 'prototype-username';
 
@@ -24,4 +24,37 @@ async function login(user)
             message: 'user does not exist'
         });
     }
+
+    if (!bcypt.compareSync(password, dynamoUser.password)){
+        return util.buildResponse(403, { message:'password is incorrect'});
+    }    
+    
+    const userInfo = {
+        username: dynamoUser.username,
+        name: dynamoUser.name
+    }
+    const token = auth.getToken(userInfo)
+    const response = {
+        user: userInfo,
+        token: token
+    }
+    return util.buildResponse(200, response);
+} 
+
+async function getUser(username){
+    const params = {
+        TableName: userTable,
+        Key: {
+            username: username
+        }
+    }
+  
+
+return await dynamodb.get(params).promise().then(response => {
+    return response.Item;
+}, error => {
+    console.error("There is an error getting user: ", error);
+}) 
 }
+
+module.exports.login = login;

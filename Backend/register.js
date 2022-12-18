@@ -8,17 +8,17 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 const userTable= 'prototype-username';
 
 async function register(userInfo){
-    const name = userinfo.name;
-    const email = userinfo.email;
-    const username = userinfo.username;
-    const password = userinfo.password;
+    const name = userInfo.name;
+    const email = userInfo.email;
+    const username = userInfo.username;
+    const password = userInfo.password;
 
     if(!username || !name || !email || !password){
        return  util.buildResponse(401,{
         message: 'All fields are required'
        } )
     }
-}
+
 
     const dynamoUser = await getUser(username.toLowerCase().trim());
     if (dynamoUser && dynamoUser.username){
@@ -40,7 +40,7 @@ async function register(userInfo){
         return util.buildResponse(503, { message: 'Server Error'});
     }
         return util.buildResponse(200, { username: username});
-
+}
     async function getUser(username){
         const params = {
             TableName: userTable,
@@ -48,7 +48,7 @@ async function register(userInfo){
                 username: username
             }
         }
-    }    
+      
 
     return await dynamodb.get(params).promise().then(response => {
         return response.Item;
@@ -56,8 +56,18 @@ async function register(userInfo){
         console.error("There is an error getting user: ", error);
     })
 
+    }
+    async function saveUser(user){
+        const params = {
+            TableName: userTable,
+            Item: user
+        }
+    }
     return await dynamodb.put(params).promise().then(() => {
         return true; 
-    }, error=> {console.error('Ther is an error saving user:', error)});
+    }, error=> {
+        console.error('There is an error saving user:', error)
+    });
 
-    module.exports.register = register;
+
+    module.exports.register = register; 

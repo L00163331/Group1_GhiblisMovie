@@ -10,7 +10,7 @@ const verifyPath="/verify";
 const registerPath="/register";
 
 
-export const handler = async(event) => {
+exports.handler = async(event) => {
     console.log("Request Event: ",event)
     let response; 
     switch(true){
@@ -26,12 +26,13 @@ export const handler = async(event) => {
             response = loginService.login(loginbody); 
             break;
         case event.httpMethod === "POST" && event.path === verifyPath:
-            response = util.buildResponse(200); 
+            const verifyBody = JSON.parse(event.body);
+            response = verifyService.verify(verifyBody);
             break; 
         default:
             response = util.buildResponse(404, "404 Not found");
     }
      
         return response;
-};
-  
+    };
+    
