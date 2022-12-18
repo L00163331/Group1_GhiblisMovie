@@ -33,7 +33,7 @@ async function login(user)
         username: dynamoUser.username,
         name: dynamoUser.name
     }
-    const token = auth.getToken(userInfo)
+    const token = auth.generateToken(userInfo)
     const response = {
         user: userInfo,
         token: token
