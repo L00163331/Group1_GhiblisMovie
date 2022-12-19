@@ -21,3 +21,5 @@ function verify(requestBody){
         token: token
     })
 }
+
+module.exports.verify = verify;

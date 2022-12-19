@@ -25,7 +25,7 @@ function verifyToken(username, token){
             }
         }
         return{
-            verified: false,
+            verified: true,
             message: 'verified'
         }
     })
