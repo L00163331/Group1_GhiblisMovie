@@ -1,4 +1,4 @@
-const registerService =require('./register');
+const registerService = require('./register');
 const loginService =require('./login');
 const verifyService =require('./verify');
 const util = require('./utils');

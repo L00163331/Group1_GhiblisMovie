@@ -6,7 +6,7 @@ const util = require('./utils');
 const bcypt = require('bcryptjs');
 const auth = require('./auth');
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-const userTable= 'prototype-username';
+const userTable= 'prototype-table';
 
 async function login(user)
 {
