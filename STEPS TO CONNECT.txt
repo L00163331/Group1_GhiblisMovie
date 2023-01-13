@@ -1,0 +1,26 @@
+To Test API gateway, and test initial phase of protype I am writing following steps to setup infrastructre in AWS account:
+
+We are using AWS's lamda, gateway, and DynamoDB service in backend application
+
+Steps: 
+
+API gateway:
+
+1. Make API gateway
+2. Create "\health" resource with "GET" method (to check if api is working or not)
+3. Create "\login" resource with "POST" method 
+4. Create "\register" resource with "POST" method 
+5. Create "\verify" resource with "POST" method (to check token) 
+	  
+NOTE : I am not using any API key for API Gateway at the moment but u guys can use for security purpose
+
+
+AWS lamda:
+
+1. Create a function with Node js 14.x version
+2. Add zip code from backend file in github repo branch - (Darshan-L00171222)
+3. Change userTable variable in login.js or Register.js with with DynamoDB table name
+
+DynamoDB:
+
+1. Create a table with Partition key - username
