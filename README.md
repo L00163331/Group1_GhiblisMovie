@@ -98,8 +98,8 @@ Update the below to add what the group is using <<>>
     Front-End: React
     Back-End: Node JS
     DB: Dynamo DB
-    Docker
-    K8s
+    Containerization: Docker
+    Orchestration: K8s
     >>
   - programming using the IDE << VS Code >>
   - code coverage tool used << VS Code >>
